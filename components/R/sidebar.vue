@@ -1,4 +1,5 @@
 <script setup>
+
 const { currentRoute } = useRouter()
 
 const checkPath = (path) => {
@@ -138,20 +139,28 @@ const checkPath = (path) => {
                         <span class="ml-2 font-light">Category</span>
                     </Nuxt-link>
                 </li>
-                <li>
-                    <Nuxt-link to="/leave" class="flex items-center p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <li :class="checkPath('hrms-leaves')">
+                    <Nuxt-link to="/hrms/leaves" class="flex items-center p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="w-4 h-4 text-gray-800 dark:text-yellow-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
                             <path d="m17.914 18.594-8-18a1 1 0 0 0-1.828 0l-8 18a1 1 0 0 0 1.157 1.376L8 18.281V9a1 1 0 0 1 2 0v9.281l6.758 1.689a1 1 0 0 0 1.156-1.376Z"/>
                         </svg>
                         <span class="ml-2 font-light">Leave</span>
                     </Nuxt-link>
                 </li>
-                <li>
-                    <Nuxt-link to="" class="flex items-center p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <li :class="checkPath('hrms-payroll')">
+                    <Nuxt-link to="/hrms/payroll" class="flex items-center p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="w-4 h-4 text-gray-800 dark:text-yellow-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1M2 5h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
                         </svg>
                         <span class="ml-2 font-light">Payroll</span>
+                    </Nuxt-link>
+                </li>
+                <li :class="checkPath('hrms-schedule')" hidden>
+                    <Nuxt-link to="/hrms/schedule" class="flex items-center p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-4 h-4 text-gray-800 dark:text-yellow-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 2a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1M2 5h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+                        </svg>
+                        <span class="ml-2 font-light">Schedule</span>
                     </Nuxt-link>
                 </li>
             </ul>

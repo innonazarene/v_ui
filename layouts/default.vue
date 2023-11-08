@@ -5,10 +5,10 @@
 
     // initialize components based on data attribute selectors
     onMounted(() => {
-        initFlowbite();
+        initFlowbite()
     })
     useHead({
-        title: 'SAMPLE | '+currentRoute.value.name
+        title: 'Sample System | '+currentRoute.value.name
     })
 </script>
 
