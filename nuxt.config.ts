@@ -5,7 +5,10 @@ export default defineNuxtConfig({
         '@nuxtjs/color-mode',
     ],
     devtools: { enabled: true },
-    colorMode: {classSuffix: '',},
+    colorMode: {
+        preference:'dark',
+        classSuffix: '',
+    },
     css:[
         'assets/css/style.css',
     ]
