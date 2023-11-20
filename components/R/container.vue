@@ -9,7 +9,7 @@
 
 <template>
     <div class="shadow-md p-4 bg-white mb-3 border-t-gray-800 border-t-4">
-        <p class="text-2xl font-light text-gray-900 pb-5">{{ containerLabel }}</p>
+        <p class="text-lg font-semibold text-gray-900 pb-5">{{ containerLabel }}</p>
 
         <div>
             <slot />

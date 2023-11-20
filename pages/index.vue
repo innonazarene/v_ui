@@ -1,17 +1,19 @@
 <script setup>
-
+    definePageMeta({
+        layout:'dashboard'
+    })
 </script>
 
 <template>
-    <RContainer container-label="SUMMARY THIS MONTH">
-        <HrmsDashboardContentSummary/>
-    </RContainer>
-    <div class="md:flex gap-4">
-        <RContainer class="w-full md:w-1/2" container-label="BIRTHDAYS">
-            <HrmsDashboardContentBirthday/>
-        </RContainer>
-        <RContainer class="w-full md:w-1/2" container-label="EMPLOYEE CHART">
-            <HrmsDashboardContentChart/>
-        </RContainer>
+    <div class="mt-16 p-4">
+        <p class="text-2xl text-gray-800">QUICK ACTIONS</p>
+    </div>
+    <div class="w-full p-2 bg-white">
+        <ShortcutsHrms />
+    </div>
+    <div class="w-full p-2 bg-white">
+        <ShortcutsAccounting />
     </div>
 </template>
+<style>
+</style>

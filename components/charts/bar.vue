@@ -5,25 +5,26 @@
 
     ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-    const chartData = ref({
-        labels: ["January", "February", "March", "April", "May", "June"],
-        datasets: [{
-            label:"Absents",
-            backgroundColor: "red",
-            borderColor: "red",
-            data: [50, 70, 80, 60, 90, 75],
-        }],
+    defineProps({
+        chartId: {
+            type: String,
+            required: true,
+        },
+        chartData: {
+            type: Object,
+            required: false,
+        },
+        chartOptions: {
+            type: Object,
+            required: false,
+        },
     })
 
-    const chartOptions = ref({
-        aspectRatio:(1529/3000),
-        responsive: true,
-    });
 </script>
 
 <template>
     <Bar
-        id="my-chart-id"
+        :id="chartId"
         :options="chartOptions"
         :data="chartData"
     />

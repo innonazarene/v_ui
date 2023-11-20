@@ -1,0 +1,17 @@
+<script setup>
+    import { onMounted } from 'vue'
+    import { initFlowbite } from 'flowbite'
+
+    // initialize components based on data attribute selectors
+    onMounted(() => {
+        initFlowbite();
+    })
+    useHead({
+        title: 'Sample System | Dashboard'
+    })
+</script>
+
+<template>
+    <RHeader :has-sidebar="false" />
+    <slot />
+</template>

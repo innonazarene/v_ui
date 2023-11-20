@@ -1,6 +1,10 @@
 
 <script setup>
     defineProps({
+        hasSign: {
+            type: Boolean,
+            required: false,
+        },
         cardLabel: {
             type: String,
             required: true,
@@ -21,8 +25,8 @@
             <p class="mb-2 text-sm font-medium text-white dark:text-gray-400">
                 {{ cardLabel }}
             </p>
-            <p class="text-lg font-bold text-white dark:text-gray-200">
-                {{ new Intl.NumberFormat().format(cardTotalSummary ?? 0) }}
+            <p class="text-xl font-bold text-white dark:text-gray-200">
+                {{ hasSign? '₱' : '' }} {{ new Intl.NumberFormat().format(cardTotalSummary ?? 0) }}
             </p>
         </div>
     </div>

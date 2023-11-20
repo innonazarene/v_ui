@@ -14,7 +14,7 @@
             <HrmsDashboardContentChart/>
         </RContainer>
     </div>
-    <RContainer class="w-full" container-label="QUICK ACTIONS">
-            <ShortcutsHrms/>
+    <RContainer class="w-full md:w-1/2" container-label="QUICK ACTIONS">
+        <ShortcutsHrms/>
     </RContainer>
 </template>

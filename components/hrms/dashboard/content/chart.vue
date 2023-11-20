@@ -1,24 +1,26 @@
 
 <script setup>
-    import { Pie } from 'vue-chartjs';
+    import { Doughnut, Pie } from 'vue-chartjs';
     import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
     ChartJS.register(ArcElement, Tooltip, Legend)
 
     const chartData = ref({
-        labels: ["Department 1", "Department 2", "Department 3", "Department 4"],
+        labels: ["Department 1", "Department 2"],
         datasets: [
             {
-            backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-            data: [40, 20, 80, 10]
+            backgroundColor: ['#374151', '#315b9e'],
+            data: [40, 20,]
             }
         ],
     })
+
+    const chartOptions = ref({
+        responsive: true,
+        aspectRatio:1.5,
+        indexAxis: 'y',
+    });
 </script>
 
 <template>
-    <Pie
-        class="w-full h-6"
-        id="line-chart-id"
-        :data="chartData"
-    />
+    <ChartsDoughnut chart-id="department-id" :chart-data="chartData" :chartOptions="chartOptions" />
 </template>

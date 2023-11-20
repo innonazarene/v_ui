@@ -4,25 +4,26 @@
 
     ChartJS.register(Title, Tooltip, Legend, CategoryScale, LinearScale, LineElement, PointElement);
 
-    const chartData = ref({
-        labels: ["January", "February", "March", "April", "May", "June"],
-        datasets: [{
-            label:"Absents",
-            backgroundColor: "green",
-            borderColor: "green",
-            data: [50, 70, 80, 60, 90, 75],
-        }],
+    defineProps({
+        chartId: {
+            type: String,
+            required: true,
+        },
+        chartData: {
+            type: Object,
+            required: false,
+        },
+        chartOptions: {
+            type: Object,
+            required: false,
+        },
     })
 
-    const chartOptions = ref({
-        aspectRatio:(1529/3000),
-        responsive: true,
-    });
 </script>
 
 <template>
     <Line
-        id="line-chart-id"
+        :id="chartId"
         :options="chartOptions"
         :data="chartData"
     />

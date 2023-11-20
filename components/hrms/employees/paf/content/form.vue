@@ -6,10 +6,10 @@
             <p class="text-center text-md">Date : 11/25/23</p>
         </div>
         <div class="w-full md:flex gap-2">
-            <div class="md:w-1/3 py-2">
+            <div class="md:w-1/2 py-2">
                 <MiscHrmsEmployeeInformation/>
             </div>
-            <div class="md:w-3/4 py-2">
+            <div class="md:w-1/2 py-2">
                 <div class="w-full p-2">
                     <p class="font-semibold text-xl">ACTION TO BE TAKEN</p>
                 </div>

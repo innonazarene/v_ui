@@ -13,12 +13,8 @@
 </script>
 
 <template>
-    <RHeader :has-sidebar="true" />
-    <RSidebar />
-
-    <div class="p-4 sm:ml-64 py-16">
-        <RPageInfo/>
-        <slot />
+    <div class="md:flex justify-between">
+        <p class="p-4 text-2xl">Company Name</p>
     </div>
-
+    <AccountingDashboardAccounts />
 </template>
